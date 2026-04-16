@@ -8,129 +8,22 @@
 /* Cuerpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #4F5235;
+    color: #8A8F63;
 }
 
-/* Header */
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Navegación */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Hover en enlaces */
-nav ul li a:hover {
-    color: #631c1c;
-}
-
-/* Main y secciones */
-main {
-    padding: 20px;
-}
-img{
-    
-    width: 320px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    border: 5px solid #000000; 
-    
+h2 { 
+    color: black;
 
 }
-section {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-    /* Sombra en secciones */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
 
-section h2 {
-    margin-bottom: 10px;
-}
 
-/* Listas */
-ul {
-    list-style: none;
-    padding: 0;
-}
 
-ul li {
-    margin: 8px 0;
-    padding: 10px;
-    background: #eee;
-    border-radius: 5px;
-}
 
-ul li a {
-    color: #333;
-    text-decoration: none;
-}
 
-/* Hover en enlaces de proyectos */
-ul li a:hover {
-    color: #000;
-    text-decoration: underline;
-}
-
-/* Formulario */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #333;
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 30px;
-    margin-top: 80px;
-}
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 100%) {
     section {
         width: 85%;
     }
@@ -139,4 +32,10 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+div {
+    align-items:flex-start
+
+
+
 }
