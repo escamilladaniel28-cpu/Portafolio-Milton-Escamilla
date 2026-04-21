@@ -11,8 +11,8 @@ section {
     padding: 30px 20px;
     border-radius: 10px;
     background: #ffffff50;
-    
-   
+
+
 }
 
 .hero-title {
@@ -20,14 +20,14 @@ section {
     text-align: center;
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
     margin-top: 16px;
-    
+
 }
 
 /* ─── LISTA DE PROYECTOS ─── */
 ul {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    list-style:none;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
     gap: 10px;
 }
 
@@ -79,6 +79,7 @@ form input {
     margin-top: 16px;
     gap: 7px;
 }
+
 form button {
     padding: 10px 20px;
     background-color: #000;
@@ -117,44 +118,39 @@ nav ul li a:hover {
     color: #727467;
 }
 
-/* ─── RESPONSIVE ─── */
 
-/* Tablet */
+/* ═══════════════════════════════════════
+   RESPONSIVE — TABLET  (≤ 900px)
+═══════════════════════════════════════ */
 @media (max-width: 900px) {
-    section {
-        width: 90%;
+    section,
+    .seccion {
+        width: min(90%, var(--max-width));
+    }
+
+    ul {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 }
 
-main {
-
-  display: flex;
-  flex-direction: column;  /* Una debajo de la otra */
-  align-items: center;     /* Centradas horizontalmente */
-  gap: 30px;               /* Espacio entre secciones */
-  padding: 20px;
-}
-
-section, .seccion {
-  width: 60%;   /* Ajusta este % según qué tan anchas las quieras */
-}
-
-
-
-
-
-
-/* Móvil */
+/* 
+   RESPONSIVE — MÓVIL  (≤ 600px) */
 @media (max-width: 600px) {
-    section {
+    section,
+    .seccion {
         width: 95%;
         padding: 20px 14px;
     }
 
-    /* inputs y botón ocupan todo el ancho */
+    /* grid de 1 columna en móvil */
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* inputs y botón a ancho completo */
     form input {
+        flex: 1 1 100%;
         max-width: 100%;
-        width: 100%;
     }
 
     form button {
@@ -165,5 +161,16 @@ section, .seccion {
         flex-direction: column;
         align-items: center;
         gap: 12px;
+    }
+}
+
+/* 
+   RESPONSIVE — MUY PEQUEÑO  (≤ 360px)*/
+@media (max-width: 360px) {
+    section,
+    .seccion {
+        width: 100%;
+        border-radius: 0;
+        padding: 14px 10px;
     }
 }
