@@ -54,18 +54,18 @@ img {
 .sobre-mi-texto {
     max-width: 500px;
 }
-
 #riwi {
     display: flex;
     position: fixed;
     background-color: black;
-    top: 830px;
+    bottom: 20px;
     right: 20px;
     width: 150px;
     height: auto;
     border-radius: 100px;
     border: 2px solid #ccc;
 }
+
 
 
 #proyectos {
