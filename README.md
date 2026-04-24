@@ -116,7 +116,7 @@ portafolio/
 
 ## 🛠️ How to Use
 
-1. Clone or download the repository
+1. Clone or download the repository: https://github.com/escamilladaniel28-cpu/escamilladaniel28-cpu.github.io.git
 2. Open `index.html` in your browser
 3. You can also use **Live Server** in VS Code for local development
 
