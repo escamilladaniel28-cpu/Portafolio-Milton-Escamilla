@@ -46,7 +46,8 @@
             <h2 class="hero-title">MILTON ESCAMILLA</h2>
             <span>Developer web</span>
             <div class="hero-descripcion">
-                <p>
+                <!-- ✅ ID agregado para que JS pueda modificar este párrafo -->
+                <p id="hero-descripcion">
                     Soy una persona en constante aprendizaje y crecimiento en el mundo de la tecnología.
                     Actualmente me estoy formando en desarrollo de software, donde he adquirido habilidades en
                     programación con Python, lógica de programación, estructuras de control, listas y funciones.
@@ -80,8 +81,8 @@
             <form>
                 <input type="text" placeholder="Tu nombre">
                 <input type="email" placeholder="Tu correo">
-                <!-- Al hacer click cambia el texto del párrafo hero -->
-                <button type="button">Send</button>
+                <!-- ✅ ID agregado para que JS maneje el click -->
+                <button type="button" id="btn-send">Send</button>
             </form>
         </section>
 
@@ -96,14 +97,8 @@
         </div>
     </footer>
 
-    <!-- ✅ Script justo antes del cierre de </body> -->
+    <!-- ✅ Script externo — toda la lógica JS está en scripts.js -->
     <script src="src/scripts/scripts.js"></script>
-
-    <script>
-        window.onload = function () {
-            alert("¡Bienvenido a mi página!");
-        };
-    </script>
 
 </body>
 

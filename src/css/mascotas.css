@@ -1,26 +1,52 @@
-/* Header */
+/*
+   MASCOTAS — usa las variables globales de styles.css
+   ✅ Colores hardcodeados reemplazados por variables CSS
+*/
+
+/* ─── VARIABLES LOCALES (en caso de cargarse independiente) ─── */
+:root {
+    --color-bg: #4c4a4a;
+    --color-dark: #000000;
+    --color-light: #f2f2f2;
+    --color-accent: #e63946;
+    --color-white: #ffffff;
+    --color-muted: #59585e;
+    --color-border: #cccccc;
+    --color-surface: #ffffff50;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2rem;
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 100px;
+    --shadow-red: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+/* ─── CUERPO ─── */
+body {
+    background-color: var(--color-bg); /* ✅ antes: #736d6d */
+    font-family: Arial, sans-serif;
+    color: var(--color-white); /* ✅ antes: #ffffff */
+    margin: 0;
+    padding: 0;
+}
+
+/* ─── HEADER ─── */
 header {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
     flex-wrap: wrap;
-    background-color: #000000;
-    color: #fff;
+    background-color: var(--color-dark); /* ✅ antes: #000000 */
+    color: var(--color-white); /* ✅ antes: #fff */
     padding: 10px;
     text-align: center;
     position: sticky;
     top: 0;
 }
 
-/* Cuerpo */
-body {
-    background-color: #736d6d;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-
+/* ─── CONTENEDOR PRINCIPAL ─── */
 .main-contenedor {
     display: flex;
     justify-content: center;
@@ -29,10 +55,11 @@ body {
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.7);
     padding: 4rem;
-    padding-bottom: 6rem; /* espacio para el footer fijo */
+    padding-bottom: 6rem;
     box-sizing: border-box;
 }
 
+/* ─── GALERÍA DE IMÁGENES ─── */
 .img-section {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -45,17 +72,34 @@ body {
 .img-contenedor img {
     height: 30rem;
     width: 400px;
-    box-shadow: 7px 3px 20px rgba(255, 0, 0, 0.2);
+    max-width: 100%;   /* ✅ responsiva */
+    height: auto;      /* ✅ mantiene proporción */
+    object-fit: cover;
+    box-shadow: 7px 3px 20px var(--shadow-red); /* ✅ usa variable */
     display: block;
 }
 
+/* ─── ENLACE VOLVER ─── */
+#volver {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#volver a {
+    color: var(--color-white);
+    text-decoration: underline;
+    font-size: var(--font-base);
+}
+
+/* ─── FOOTER ─── */
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #000;
-    color: white;
+    background-color: var(--color-dark); /* ✅ antes: #000 */
+    color: var(--color-white); /* ✅ antes: white */
     text-align: center;
     padding: 10px 0;
     box-sizing: border-box;
@@ -68,8 +112,9 @@ footer {
         padding-bottom: 6rem;
     }
 
+    /* 2 columnas en tablet */
     .img-section {
-        grid-template-columns: 1fr 1fr; /* sigue en 2 columnas pero más pequeñas */
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
     }
 
@@ -80,7 +125,7 @@ footer {
     }
 }
 
-/* ── Móvil (max 480px) ── */
+/* ── Móvil (max 680px) ── */
 @media (max-width: 680px) {
     header {
         display: flex;
@@ -95,8 +140,9 @@ footer {
         padding-bottom: 6rem;
     }
 
+    /* 1 columna en móvil */
     .img-section {
-        grid-template-columns: 1fr; /* 1 columna en móvil */
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
@@ -106,4 +152,3 @@ footer {
         object-fit: cover;
     }
 }
-
